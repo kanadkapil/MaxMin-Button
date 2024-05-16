@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css"> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <script src="script.js"></script> </head>
+
+  <title>Button Text Change</title>
+  <style>
+    body {
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    #name-button {
+      width: 400px;
+      height: 250px;
+      background-color: rgb(75, 183, 219);
+      padding: 10px 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 30px;
+      text-align: center;
+      transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out; /* Add transition effects */
+      box-shadow: 10px;
+    }
+    #name-button:hover {
+      transform: scale(1.05); /* Zoom on hover */
+      background-color: lightblueviolet; /* Change background color on hover */
+    }
+    #name-button.clicked { /* Add a class for clicked state */
+      font-weight: normal; /* Remove bold text after click */
+    }
+  </style>
+</head>
+<body>
+  <button id="name-button">Max Bhatia</button>
+
+  <script>
+  $(document).ready(function() {
+    $("#name-button").click(function() {
+      $(this).text("Min Bhatia");
+      $(this).addClass('clicked'); /* Add clicked class on click */
+    });
+  });
+  </script>
+</body>
+</html>
